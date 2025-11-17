@@ -248,7 +248,7 @@ const Index = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <div className="text-center">
-                <div className="text-5xl font-bold text-primary mb-2">4,990₽</div>
+                <div className="text-5xl font-bold text-primary mb-2">2,899₽</div>
                 <div className="text-sm text-muted-foreground line-through">5,990₽</div>
               </div>
               
@@ -282,6 +282,11 @@ const Index = () => {
             <Button variant="ghost" size="sm" asChild>
               <a href="https://www.youtube.com/watch?v=bW7udRDA48U" target="_blank" rel="noopener noreferrer">
                 <Icon name="Youtube" size={20} />
+              </a>
+            </Button>
+            <Button variant="ghost" size="sm" asChild>
+              <a href="https://t.me/RVMGOD" target="_blank" rel="noopener noreferrer">
+                <Icon name="Send" size={20} />
               </a>
             </Button>
           </div>
