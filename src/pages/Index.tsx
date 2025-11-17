@@ -93,9 +93,11 @@ const Index = () => {
                   <Icon name="ShoppingCart" className="mr-2" size={20} />
                   Купить сейчас
                 </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-2">
-                  <Icon name="Play" className="mr-2" size={20} />
-                  Смотреть обзор
+                <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-2" asChild>
+                  <a href="https://www.youtube.com/watch?v=yiWeS8Ko738" target="_blank" rel="noopener noreferrer">
+                    <Icon name="Play" className="mr-2" size={20} />
+                    Смотреть обзор
+                  </a>
                 </Button>
               </div>
             </div>
@@ -277,8 +279,10 @@ const Index = () => {
       <footer className="py-12 px-4 border-t border-border/50 bg-card/30 backdrop-blur">
         <div className="container mx-auto text-center text-muted-foreground">
           <div className="flex justify-center gap-6 mb-6">
-            <Button variant="ghost" size="sm">
-              <Icon name="Youtube" size={20} />
+            <Button variant="ghost" size="sm" asChild>
+              <a href="https://www.youtube.com/watch?v=bW7udRDA48U" target="_blank" rel="noopener noreferrer">
+                <Icon name="Youtube" size={20} />
+              </a>
             </Button>
           </div>
           <p className="text-sm">
