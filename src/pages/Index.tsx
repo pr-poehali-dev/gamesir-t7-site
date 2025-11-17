@@ -3,9 +3,11 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { OrderDialog } from '@/components/OrderDialog';
 
 const Index = () => {
   const [activeFeature, setActiveFeature] = useState(0);
+  const [orderDialogOpen, setOrderDialogOpen] = useState(false);
 
   const features = [
     {
@@ -89,7 +91,11 @@ const Index = () => {
               </p>
               
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 shadow-lg shadow-primary/50">
+                <Button 
+                  size="lg" 
+                  className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 shadow-lg shadow-primary/50"
+                  onClick={() => setOrderDialogOpen(true)}
+                >
                   <Icon name="ShoppingCart" className="mr-2" size={20} />
                   Купить сейчас
                 </Button>
@@ -252,7 +258,11 @@ const Index = () => {
                 <div className="text-sm text-muted-foreground line-through">5,990₽</div>
               </div>
               
-              <Button size="lg" className="text-xl px-12 py-8 bg-gradient-to-r from-primary to-secondary hover:opacity-90 shadow-xl shadow-primary/30">
+              <Button 
+                size="lg" 
+                className="text-xl px-12 py-8 bg-gradient-to-r from-primary to-secondary hover:opacity-90 shadow-xl shadow-primary/30"
+                onClick={() => setOrderDialogOpen(true)}
+              >
                 <Icon name="ShoppingBag" className="mr-2" size={24} />
                 Заказать со скидкой
               </Button>
@@ -295,6 +305,8 @@ const Index = () => {
           </p>
         </div>
       </footer>
+
+      <OrderDialog open={orderDialogOpen} onOpenChange={setOrderDialogOpen} />
     </div>
   );
 };
