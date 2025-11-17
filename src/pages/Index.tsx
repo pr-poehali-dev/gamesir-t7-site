@@ -278,12 +278,6 @@ const Index = () => {
         <div className="container mx-auto text-center text-muted-foreground">
           <div className="flex justify-center gap-6 mb-6">
             <Button variant="ghost" size="sm">
-              <Icon name="Instagram" size={20} />
-            </Button>
-            <Button variant="ghost" size="sm">
-              <Icon name="Twitter" size={20} />
-            </Button>
-            <Button variant="ghost" size="sm">
               <Icon name="Youtube" size={20} />
             </Button>
           </div>
